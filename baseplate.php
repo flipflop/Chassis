@@ -1,0 +1,196 @@
+<!doctype html> 
+<!--[if IEMobile]> <html class="no-js ie-mobile" lang="en"> <![endif]--> 
+<!--[if (lt IE 7)&!(IEMobile) ]> <html class="no-js ie6" lang="en"> <![endif]--> 
+<!--[if (IE 7)&!(IEMobile) ]> <html class="no-js ie7" lang="en"> <![endif]--> 
+<!--[if (IE 8)&!(IEMobile) ]> <html class="no-js ie8" lang="en"> <![endif]--> 
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]--> 
+<head> 
+	<title>Baseplate 0.5</title> 
+	
+	<meta charset="utf-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />  
+    <meta name="description" content="CSS HTML And Structured Scripts In Standards" /> 
+    <meta name="author" content="Rozario Chivers" /> 
+
+    <link rel="stylesheet" href="css/site.css" /> 
+    <link rel="stylesheet" href="dev/css/debug.css" /> 
+
+    <!-- Less CSS: for development only, should not be used on production --> 
+    <!--  
+    <link rel="stylesheet/less" type="text/css" href="dev/less/templates/layouts/layouts.less" />
+    <link rel="stylesheet/less" type="text/css" href="dev/less/templates/components/components.less" />
+    <link rel="stylesheet/less" type="text/css" href="dev/less/templates/pages/pages.less" />
+     
+     
+    <script src="dev/less/less.js"></script>
+    <script> less.env = "development"; less.watch(); </script>
+    --> 
+    
+    <?php
+		/* Less PHP docs : http://leafo.net/lessphp/ */
+		require 'dev/less/lessc.inc.php';
+		$less1 = new lessc('dev/less/templates/layouts/layouts.less');
+		file_put_contents('css/templates/layouts/layouts.css', $less1->parse());
+		
+		$less2 = new lessc('dev/less/templates/components/components.less');
+		file_put_contents('css/templates/components/components.css', $less2->parse());
+		
+		$less3 = new lessc('dev/less/templates/pages/pages.less');
+		file_put_contents('css/templates/pages/pages.css', $less3->parse());
+	?>
+	
+	<!-- Compiled Less CSS -->
+	<link rel="stylesheet" type="text/css" href="css/templates/layouts/layouts.css" /> 
+	<link rel="stylesheet" type="text/css" href="css/templates/components/components.css" />
+    <link rel="stylesheet" type="text/css" href="css/templates/pages/pages.css" />
+    
+</head> 
+ 
+<body> 
+		
+<!-- begin Component: Accessibility links --> 
+<div id="skiplinks" data-component-name="skip-links"> 
+	<ul> 
+		<li><a href="#header">Jump to main navigation</a></li> 
+		<li><a href="#main">Jump to main content</a></li> 
+		<li><a href="#footer">Jump to footer</a></li> 
+	</ul> 
+</div> 
+<!-- end Component accessibility links -->	
+	<!-- layout --> 
+	<div id="wrapper"><!-- wrapper used to provide extra stylistic hooks --> 
+	<!-- contextual CSS (Class names must remain in the correct order)
+		en-gb : language (e.g. en-us)
+		chassis site name (e.g. baseplate)
+		pg-home : page name (e.g. pg-home)
+		home : section (e.g. home, registration, search)
+		cat-1 : category context (category name agnostic to cater for category changes)
+		cat-1-2 : sub category context (category name agnostic to cater for category changes)
+		cms-seasonal : seasonal skin (allows overriding of all layout components e.g. Christmas and Summer styles for Header)
+	--> 
+	<div id="container" class="en-gb chassis home pg-baseplate-home cat-1 cat-1-2 cms-seasonal"><!-- to allow for customised seasonal layouts --> 
+ 
+		<div id="main" class="layout-3-column"><!-- components: source order important for layout, order can be changed to cater for new layout requirements --> 
+			<div id="content-subnav" class="aside">
+				<!-- side navigation -->
+			    
+			    <img src="img/baseplate-logo.png" class="logo" alt="Baseplate Logo" />
+			    
+			</div><!-- id="content-subnav" -->
+						
+			<div id="content" role="main">
+				<!-- main content -->
+				<h1>Baseplate</h1>
+				<p>
+				    Designed as a foundation to the <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>, Baseplate provides Design Grid support in CSS without the need for extra markup.
+				</p>
+                <h2>Why do I need Baseplate?</h2>
+                <p>
+                    All well designed Web sites use a design grid, to structure layout and typography. Baseplate is non invasive development tool, that will leave no trace in production code.  
+                </p>    
+                    
+                <h2>What do I get from it?</h2>
+                
+                <ul>
+                    <li>A baseline grid API</li>
+                    <li>Less.js and Less PHP can be used, providing additional transcompilation features if needed</li> 
+                    <li>Support for baseline shifts, gutter shifts, fixed width, fluid width, floated and positioned elements</li> 
+                    <li>Configurable support for any grid with constant column sizes via baseline.grid.constants.less</li>
+                    <li>An unobtrusive alternative for baseline grid support (no extra markup required)</li>
+                    <li>Easy to use, all Baseplate&#39;s properties look similar to standard CSS</li>
+                    <li>Non prescriptive, if you don&#39;t want to use the baseline grid, you can write CSS as usual</li>
+                </ul>    
+    			
+				<h2>Your Choice</h2>
+			    <p>
+			       Less.js or Less PHP is supported. If you are using Less.js, you can compile your Less Styles to CSS using the <a href="javascript: (function($, doc) {var o = document.createElement('script');o.type = 'text/javascript';o.src = 'dev/less/lesstocss.js';document.body.appendChild(o) })(jQuery, document)">Less to CSS</a> Bookmarklet.  
+			    </p>
+			    <p>  
+			       Alternatively if you are using Less PHP, your CSS will be compiled into a directory of your choice (see examples). 
+			    </p>
+			</div><!-- id="content" -->
+			
+			<div id="content-related" class="aside" role="complementary">	
+    			<h2>The API</h2>
+    			
+    			<h3>Positioning</h3>
+    			<ul class="theapi">
+        		    <li><code>.top(<span>&lt;Number&gt;</span>)</code></li>
+                	<li><code>.right(<span>&lt;Number&gt;</span>)</code></li>
+                	<li><code>.bottom(<span>&lt;Number&gt;</span>)</code></li>
+                	<li><code>.left(<span>&lt;Number&gt;</span>)</code></li>
+                	<li><code>.gutterLeft(<span>&lt;Number&gt;</span>)</code></li>
+                	<li><code>.gutterRight(<span>&lt;Number&gt;</span>)</code></li>	
+                	<li><code>.firstGutterLeft()</code></li>	
+            		<li><code>.lastGutterRight()</code></li>	    
+    			</ul>
+    			
+    			<h3>Dimensions</h3>
+    			<ul class="theapi">
+                    <li><code>.contentWidth()</code></li>
+                    <li><code>.contentWidthWithoutSideGutters()</code></li>
+                    <li><code>.width(<span>&lt;Number&gt;</span>)</code></li>
+                  	<li><code>.height<span>(&lt;Number&gt;</span>)</code></li>		    
+    			</ul>
+		
+		    	<h3>Margins and Padding</h3>
+    			<ul class="theapi">
+                  	<li><code>.marginTop(<span>&lt;Number&gt;</span>)</code></li>
+                	<li><code>.marginRight(<span>&lt;Number&gt;</span>)</code></li>
+                	<li><code>.marginBottom(<span>&lt;Number&gt;</span>)</code></li>
+                	<li><code>.marginLeft(<span>&lt;Number&gt;</span>)</code></li>
+                	<li><code>.marginLeftGutter(<span>&lt;Number&gt;</span>)</code></li>
+                	<li><code>.marginRightGutter(<span>&lt;Number&gt;</span>)</code></li>
+            		<li><code>.firstGutterLeftMargin()</code></li>	
+            		<li><code>.lastGutterRightMargin()</code></li>
+                	<li><code>.paddingLeftGutter(<span>&lt;Number&gt;</span>)</code></li>
+                	<li><code>.paddingRightGutter(<span>&lt;Number&gt;</span>)</code></li>
+                	<li><code>.paddingTop(<span>&lt;Number&gt;</span>)</code></li>
+                	<li><code>.paddingRight(<span>&lt;Number&gt;</span>)</code></li>
+                	<li><code>.paddingBottom(<span>&lt;Number&gt;</span>)</code></li>
+                	<li><code>.paddingLeft(<span>&lt;Number&gt;</span>)</code></li>	
+                	<li><code>.firstGutterLeftPadding()</code></li>	
+            		<li><code>.lastGutterRightPadding()</code></li>		    
+    			</ul>
+    			
+    			<h2>Debug (classes added to Body tag)</h2>
+    			<ul class="tooling">
+    			    <li><a href="#" id="debug">debug</a></li>
+                  	<li><a href="#" id="debug-grid">debug-grid</a></li>
+                  	<li><a href="#" id="debug-grid-body">debug-grid-body</a></li>
+                  	<li><a href="#" id="debug-layouts">debug-layouts</a></li>
+                </ul>
+                <strong>Note:</strong> for browsers that do not support CSS gradients, a <a href="dev/css/creategrid.php">dynamic debug grid background</a> is available in PHP.  	
+    	
+			</div><!-- id="content-related" -->
+ 
+		</div><!-- id="main" --> 
+		
+		<div id="header" role="banner"> 
+				
+			<blockquote>
+			    <p>&quot;Grid Layouts without extra markup&quot;</p>
+			</blockquote>
+				
+		</div><!-- id="header" --> 
+		
+		<div id="footer"> 
+		    <h3>Contributors</h3> 
+            <ul>
+                <li>Dan Scotton @danscotton</li>
+                <li>Rozario Chivers @terraflop</li>
+                <li>Anna Huang @nnFlip</li>
+                <li>Andy Beeching @andybeeching</li>
+                <li>Dominic Hoare</li>
+		    </ul>
+		</div><!-- id="footer" -->
+ 
+	</div><!-- id="container" --> 
+	
+</div><!-- id="wrapper" --> 
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+<script>window.jQuery || document.write('<script src="js/lib/jquery-min.js">\x3C/script>')</script>
+<script src="dev/js/baseplate.events.js"></script>
+</body> 
+</html>

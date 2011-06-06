@@ -1,0 +1,462 @@
+/**
+ *
+ * Baseplate 0.5
+ *
+ * Copyright 2011 
+ *
+ * Rozario Chivers @terraflop
+ *
+ * Dual licensed under the MIT or GPL Version 2 licenses 
+ * http://en.wikipedia.org/wiki/MIT_License
+ * http://en.wikipedia.org/wiki/GNU_General_Public_License
+ *
+ */
+
+ /* uncomment to display baseline grid background in Internet Explorer (requires PHP5.0 +)
+ .debug-grid #container {
+   min-height: 700px;
+   background: #a8a8a8 url("creategrid.php") repeat-y;
+ }
+ */
+
+/* 
+ * TODO : make Jim Wilkinson's selectors more DRY!
+ * TODO : standardise and prioritise warning colours
+ * */
+
+/* WAI ARIA */
+.debug [role]:before {
+	content: "role: " attr(role);
+	outline: 1px solid #ccc;
+	padding: 1px;
+	color: #333;
+	background: #eee;
+	font: 9px Verdana, sans-serif;
+}
+
+/* --- figure --- */
+.debug header {
+	border: 1px solid #333 !important;
+}
+
+.debug header:before {
+	content: "header";
+	outline: 1px solid #ccc;
+	padding: 1px;
+	color: #fff;
+	background: #000;
+	font: 9px Verdana, sans-serif;
+}
+
+/* some styles taken from Jim Wilkinson's diagnose.css and adapted for HTML5 */
+
+/* --- figure --- */
+.debug figure {
+	border: 1px solid #00c !important;
+}
+
+.debug figure:before {
+	content: "figure";
+	outline: 1px solid #009;
+	padding: 1px;
+	color: #fff;
+	background: #009;
+	font: 9px Verdana, sans-serif;
+}
+
+/* --- article --- */
+.debug article {
+	border: 1px solid #CCC !important;
+}
+
+.debug article:before {
+	content: "article";
+	outline: 1px solid #000;
+	padding: 1px;
+	color: #000;
+	background: #eee;
+	font: 9px Verdana, sans-serif;
+}
+
+.debug article[id]:before {
+	content: "article#" attr(id);
+	border: 1px solid #000;
+	padding: 1px;
+	color: #000;
+	background: #ffadc2;
+	font: 9px Verdana, sans-serif;
+}
+
+.debug article[class]:before {
+	content: "article." attr(class);
+	border: 1px solid #000;
+	padding: 1px;
+	color: #000;
+	background: #ffadc2;
+	font: 9px Verdana, sans-serif;
+}
+
+/* --- Sections --- */
+.debug section {
+	border: 1px solid #CCC !important;
+}
+
+.debug section[id]:before {
+	content: "section#" attr(id);
+	border: 1px solid #900;
+	padding: 1px;
+	color: #cc0;
+	background: #ffadc2;
+	font: 9px Verdana, sans-serif;
+}
+
+.debug section[class]:before {
+	content: "section." attr(class);
+	border: 1px solid #900;
+	padding: 1px;
+	color: #600;
+	background: #ffadc2;
+	font: 9px Verdana, sans-serif;
+}
+
+/* --- Divs --- */
+.debug div {
+	border: 1px solid #CCC !important;
+}
+
+.debug div[id]:before {
+	content: "div#" attr(id);
+	border: 1px solid #C00;
+	padding: 1px;
+	color: #000;
+	background: #FF9;
+	font: 9px Verdana, sans-serif;
+}
+
+.debug div[class]:before {
+	content: "div." attr(class);
+	border: 1px solid #C00;
+	padding: 1px;
+	color: #000;
+	background: #FF9;
+	font: 9px Verdana, sans-serif;
+}
+
+/* --- Headings --- */
+.debug h1, 
+.debug h2, 
+.debug h3, 
+.debug h4, 
+.debug h5, 
+.debug h6 {
+	/* color: #090 !important; */
+}
+
+.debug h1:before, 
+.debug h2:before, 
+.debug h3:before, 
+.debug h4:before, 
+.debug h5:before, 
+.debug h6:before {
+	border: 1px solid #C00;
+	padding: 1px;
+	color: #000;
+	background: #FF9;
+	font: 9px Verdana, sans-serif;
+}
+
+.debug h1:before {
+	content: "h1";
+}
+
+.debug h2:before {
+	content: "h2";
+}
+
+.debug h3:before {
+	content: "h3";
+}
+
+.debug h4:before {
+	content: "h4";
+}
+
+.debug h5:before {
+	content: "h5";
+}
+
+.debug h6:before {
+	content: "h6";
+}
+
+/* --- Deprecated HTML5 tags --- */
+
+.debug acronym,
+.debug applet,
+.debug basefont,
+.debug big,
+.debug center,
+.debug dir,
+.debug font,
+.debug frame,
+.debug frameset,
+.debug isindex,
+.debug noframes,
+.debug s,
+.debug strike,
+.debug tt,
+.debug u {
+	background: #F00 !important;
+}
+
+/* Lists: ol, ul, dl black border, pale khaki BG; li, dd khaki; dt grey
+will not show FONT use (but elements within them will) */
+.debug ol, 
+.debug ul, 
+.debug dl, 
+.debug font ol, 
+.debug font ul, 
+.debug font dl {
+	border: 1px solid #000 !important;
+	border-collapse: separate !important;
+	background: #FCFCF9 !important;
+}
+
+.debug li, 
+.debug dd, 
+.debug font li, 
+.debug font dd {
+	background: #E9E9D0 !important;
+}
+
+.debug dt, 
+.debug font dt {
+	background: #E0E0D0 !important;
+}
+
+/* --- Other text elements w/ id or class --- */
+.debug p[id]:before {
+	content: "p#" attr(id);
+	border: 1px solid #C00;
+	padding: 1px;
+	color: #000;
+	background: #FF9;
+	font: 9px Verdana, sans-serif;
+}
+
+.debug p[class]:before {
+	content: "p." attr(class);
+	border: 1px solid #C00;
+	padding: 1px;
+	color: #000;
+	background: #FF9;
+	font: 9px Verdana, sans-serif;
+}
+
+.debug ul[id]:before {
+	content: "ul#" attr(id);
+	border: 1px solid #C00;
+	padding: 1px;
+	color: #000;
+	background: #FF9;
+	font: 9px Verdana, sans-serif;
+}
+
+.debug ul[class]:before {
+	content: "ul." attr(class);
+	border: 1px solid #C00;
+	padding: 1px;
+	color: #000;
+	background: #FF9;
+	font: 9px Verdana, sans-serif;
+}
+
+.debug ol[id]:before {
+	content: "ol#" attr(id);
+	border: 1px solid #C00;
+	padding: 1px;
+	color: #000;
+	background: #FF9;
+	font: 9px Verdana, sans-serif;
+}
+
+.debug ol[class]:before {
+	content: "ol." attr(class);
+	border: 1px solid #C00;
+	padding: 1px;
+	color: #000;
+	background: #FF9;
+	font: 9px Verdana, sans-serif;
+}
+
+.debug a[id]:before {
+	content: "a#" attr(id);
+	border: 1px solid #C00;
+	padding: 1px;
+	color: #000;
+	background: #FF9;
+	font: 9px Verdana, sans-serif;
+}
+
+.debug a[class]:before {
+	content: "a." attr(class);
+	border: 1px solid #C00;
+	padding: 1px;
+	color: #000;
+	background: #FF9;
+	font: 9px Verdana, sans-serif;
+}
+
+/* Hyperlinks with titles */
+.debug a[title] {
+	color: #390 !important;
+	background: #EEFFEE !important;
+}
+
+/* New window warning */
+.debug a[target="_blank"]:before {
+	content: "Opens new window:";
+	border: 1px solid #C00;
+	padding: 1px;
+	color: #000;
+	background: #FF9;
+	font: 9px Verdana, sans-serif;
+}
+
+/* javascript: warning */
+.debug a[href="javascript:"]:before {
+	content: "Remove: JavaScript Pseudo Protocol:";
+	border: 1px solid #C00;
+	padding: 1px;
+	color: #f00;
+	font-weight: bold;
+	background: #FF9;
+	font: 12px Verdana, sans-serif;
+}
+
+/* javascript: warning */
+.debug a[onclick="javascript:"]:before {
+	content: "Remove: JavaScript Pseudo Protocol:";
+	border: 1px solid #C00;
+	padding: 1px;
+	color: #f00;
+	font-weight: bold;
+	background: #FF9;
+	font: 12px Verdana, sans-serif;
+}
+
+.debug a[onclick]:before,
+.debug div[onclick]:before,
+.debug li[onclick]:before
+.debug input[onclick]:before,
+.debug button[onclick]:before {
+	content: "Remove: Inline handler. Apply un-obtrusive event handler";
+	border: 1px solid #C00;
+	padding: 1px;
+	color: #f00;
+	font-weight: bold;
+	background: #FF9;
+	font: 12px Verdana, sans-serif;
+}
+
+/* show all HTML components with data-attributes */
+.debug-components div[data-component-name]:before {
+	content: "" attr(data-component-name);
+	position: absolute;
+	z-index: 20;
+	text-transform: uppercase;
+	border: 1px solid #333;
+	padding: 4px;
+	color: #344235;
+	font-weight: bold;
+	background: #FBE799;
+	font: 12px Verdana, sans-serif;
+}
+
+.debug-layouts .layout-1-column {
+  background: rgba(51, 51, 51, 0.2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#33333333, endColorstr=#33333333)";   /* IE 8 */  
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33333333,endColorstr=#33333333); /* IE 7 */ 
+}
+
+.debug-layouts .layout-2-column #content,
+.debug-layouts .layout-2-column #content-related {
+  background: rgba(51, 51, 51, 0.2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#33333333, endColorstr=#33333333)";   /* IE 8 */  
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33333333,endColorstr=#33333333); /* IE 7 */
+}
+
+.debug-layouts .layout-1-column[class]:after, 
+.debug-layouts .layout-2-column[class]:after,
+.debug-layouts .layout-3-column[class]:after,
+.debug-layouts .layout-4-column[class]:after,
+.debug-layouts .layout-rhs-nav[class]:after,
+.debug-layouts .layout-lhs-nav[class]:after  {
+  content: "Layout: " attr(class);
+  position: relative;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  border: 1px solid #333;
+  background-color: #fff;
+}
+
+.debug-layouts .layout-2-column .col-1,
+.debug-layouts .layout-2-column .col-2 {
+  background: rgba(51, 51, 51, 0.3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c333333, endColorstr=#4c333333)";   /* IE 8 */  
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c333333,endColorstr=#4c333333); /* IE 7 */
+  zoom: 1;
+}
+
+/* begin layout-3-column */
+
+.debug-layouts .layout-3-column #content-subnav,
+.debug-layouts .layout-3-column .col-1, 
+.debug-layouts .layout-3-column #content,
+.debug-layouts .layout-3-column .col-2,
+.debug-layouts .layout-3-column #content-related,
+.debug-layouts .layout-3-column .col-3 {
+  background: rgba(51, 51, 51, 0.3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c333333, endColorstr=#4c333333)";   /* IE 8 */  
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c333333,endColorstr=#4c333333); /* IE 7 */
+  zoom: 1;
+}
+
+/* end layout-3-column */
+
+/* begin layout-rhs-nav */
+
+.debug-layouts .layout-rhs-nav  #content,
+.debug-layouts .layout-rhs-nav  #content-related {
+  background: rgba(51, 51, 51, 0.3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c333333, endColorstr=#4c333333)";   /* IE 8 */  
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c333333,endColorstr=#4c333333); /* IE 7 */
+  zoom: 1;
+}
+
+/* end layout-rhs-nav */
+
+/* begin layout-lhs-nav */
+
+.debug-layouts .layout-lhs-nav  #content-subnav,
+.debug-layouts .layout-lhs-nav  #content-related {
+  background: rgba(51, 51, 51, 0.3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c333333, endColorstr=#4c333333)";   /* IE 8 */  
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c333333,endColorstr=#4c333333); /* IE 7 */
+  zoom: 1;
+}
+
+/* end layout-lhs-nav */
+
+@media all and (orientation:portrait) {
+
+}
+
+@media all and (orientation:landscape) {
+	
+}
+
+/* Positioned Components Debug */
+

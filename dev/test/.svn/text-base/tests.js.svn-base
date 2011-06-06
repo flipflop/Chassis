@@ -1,0 +1,120 @@
+/**
+ *
+ * CHASSIS 2.0
+ *
+ * Copyright 2011 Rozario Chivers
+ *
+ * Dual licensed under the MIT or GPL Version 2 licenses 
+ * http://en.wikipedia.org/wiki/MIT_License
+ * http://en.wikipedia.org/wiki/GNU_General_Public_License
+ *
+ */
+
+// documentation on writing tests here: http://docs.jquery.com/QUnit
+// example tests: https://github.com/jquery/qunit/blob/master/test/same.js
+
+// below are some general tests but feel free to delete them.
+
+  var testCases = (function($, doc) {
+  var pageContext = $("#container").attr("class").split(" "),
+      pageName = pageContext[3];
+  
+  module("JavaScript");
+    
+  test('Page Context', function() {
+    //expect(26);
+    //log('Page Context tests.')
+    equals( pageContext[0], "en-gb", 'locale (en-gb) present' );
+    equals( pageContext[1], "chassis", 'site name (chassis) present' );
+   // equals( pageContext[2], "checkout", 'section (checkout) present' );
+   // equals( pageContext[3], "pg-checkout-basket", 'page name (pg-checkout-basket) present' );
+    equals( pageContext[4], "cat-1", 'category (cat-1) present' );
+    equals( pageContext[5], "cat-1-2", 'sub-category (cat-1-2) present' );
+    equals( pageContext[6], "cms-seasonal", 'seasonal CSS background (cms-seasonal) present' );    
+  });
+  
+  
+  /*  ------------------------------------------
+      PAGE : BEGIN pg-checkout-basket TEST CASES
+      ------------------------------------------ */
+  if (pageName == "pg-checkout-basket") { // PAGE NAME CHECK
+
+  module("Layouts");
+
+  test("Page and Layout UI tests", function() {
+    equals("pg-checkout-basket", "pg-checkout-basket", "page name (pg-checkout-basket) present");
+    equals($("#wrapper").attr("class"), "layout-1-column", "layout: layout-1-column present");
+  });
+
+  module("Components");
+
+  test("Component UI tests", function() {
+     ok($("*[data-component-name='skip-links']")[0],"Component: skip-links present");
+     ok($("*[data-component-name='e-content-spots']")[0],"Component: e-content-spots present");
+     ok($("*[data-component-name='process-flow']")[0],"Component: process-flow present");
+     ok($("*[data-component-name='checkout-basket-main']")[0],"Component: checkout-basket-main present");
+     ok($("*[data-component-name='message-area']")[0],"Component: message-area (1) present");
+     ok($("*[data-component-name='message-area']")[1],"Component: message-area (2) present");
+     ok($("*[data-component-name='message-area']")[2],"Component: message-area (3) present");
+     ok($("*[data-component-name='checkout-products']")[0],"Component: checkout-products present");
+     ok($("*[data-component-name='checkout-promo-code']")[0],"Component: checkout-promo-code present");
+     ok($("*[data-component-name='checkout-total']")[0],"Component: checkout-total present");
+     ok($("*[data-component-name='promo-spots']")[0],"Component: promo-spots present");
+     ok($("*[data-component-name='checkout-cross-sells']")[0],"Component: checkout-cross-sells present");
+     ok($("*[data-component-name='checkout-header']")[0],"Component: checkout-header present");
+     ok($("*[data-component-name='category-nav']")[0],"Component: category-nav present");
+     ok($("*[data-component-name='select-country']")[0],"Component: select-country present");
+     ok($("*[data-component-name='footer']")[0],"Component: footer present");
+     ok($("*[data-component-name='newsletter-signup']")[0],"Component: newsletter-signup present");
+  });
+
+  } // end if (pageName == "pg-checkout-basket")
+
+  /*  ------------------------------------------
+      PAGE : END pg-checkout-basket TEST CASES
+      ------------------------------------------ */
+  
+
+  /*	------------------------------------------
+  PAGE : BEGIN TEST CASES
+  	------------------------------------------ */
+  if (pageName == "pg-checkout-your-details") { // UPDATE PAGE NAME CHECK
+
+    module("Layout");
+
+    test('UI tests', function() {
+      //log('Layout tests.' );
+	  equals( pageContext[3], "pg-checkout-your-details", 'page name (pg-checkout-your-details) present' );
+      equals( $("#wrapper").attr("class"), "layout-1-column", 'layout: layout-1-column present' );  
+    });
+
+    module(pageName);
+
+    test('Component tests', function() {
+
+      // ADD COMPONENT TESTS HERE
+      ok( $("#header")[0], 'Component: header present' );
+      ok( $("#header .links a").length == 3, 'Component: header 3 links present' ); 
+      ok( $(".process-flow")[0], 'Component: process-flow present' );
+      ok( $("#safe-secure-checkout")[0], 'Component: safe-secure-checkout present' );
+      ok( $(".header-e-spot-1")[0], 'Component: header-e-spot-1 present' );
+      ok( $(".header-e-spot-2")[0], 'Component: header-e-spot-2 present' );
+      ok( $(".payment-option")[0], 'Component: payment-option present' );
+      ok( $("#categories")[0], 'Component: categories present' );
+      ok( $("#select-country")[0], 'Component: select-country present' );
+      ok( $("#footer")[0], 'Component: footer present' );     
+ 	  ok( $("#billing-address")[0], 'Component: billing-address present' ); 
+	  ok( $("#delivery-address")[0], 'Component: delivery-address present' ); 
+
+    });
+  } // end if (pageName == "pg-checkout-basket")
+
+  /*	------------------------------------------
+   PAGE : END TEST CASES
+   	------------------------------------------ */
+
+     
+}(jQuery, document)) // end testCases()
+
+
+

@@ -1,0 +1,394 @@
+@import "../../baseplate.env.constants.less";
+@import "../../baseplate.grid.api.less";
+@import "../../baseplate.grid.constants.less";
+
+/*	------------------------------------------
+BEGIN : Debug Styles
+	------------------------------------------ */
+.debug-grid-body { /* show grid lines outside content area */
+  background-image: 
+    -webkit-linear-gradient(rgba(0,0,0,.4) 1px, transparent 1px),
+    -webkit-linear-gradient(0, rgba(0,0,255,.4) 1px, transparent 1px),
+    -webkit-linear-gradient(rgba(0,0,0,.3) 1px, transparent 1px),
+    -webkit-linear-gradient(0, rgba(0,0,255,.3) 1px, transparent 1px);
+  background-size: 5*@baseline 5*@baseline, 5*@baseline 5*@baseline, @baseline @baseline, @baseline @baseline;
+  -moz-background-size: 5*@baseline 5*@baseline, 5*@baseline 5*@baseline, @baseline @baseline, @baseline @baseline;
+}
+
+.debug-grid #container {
+  background-image:  
+  -moz-linear-gradient(rgba(0,0,0,.3) 1px, transparent 1px),
+  -moz-linear-gradient(0, rgba(0,0,0,.1) @gutter, transparent 1px);
+  
+  background-image:  
+  -webkit-linear-gradient(rgba(0,0,0,.3) 1px, transparent 1px),
+  -webkit-linear-gradient(0, rgba(0,0,0,.1) @gutter, transparent 1px);
+ 
+  background-image:  
+  -o-linear-gradient(rgba(0,0,0,.3) 1px, transparent 1px),
+  -o-linear-gradient(0, rgba(0,0,0,.1) @gutter, transparent 1px);
+  
+  background-size:  @baseline @baseline,
+                    @column+@gutter @column;
+  
+  -moz-background-size:   @baseline @baseline,
+                          @column+@gutter @column;
+}
+/*	------------------------------------------
+END : Debug Styles
+	------------------------------------------ */
+
+/* generic styles */
+
+body {
+  line-height: @baseline;
+}
+
+#main {
+  
+}
+
+#container {
+  .contentWidth();
+  .paddingTop(4);
+}
+
+/*	------------------------------------------
+	LAYOUT: layout-1-column
+	┌─────────────────┐
+	|                 |
+	|                 |
+	|                 |
+	|                 |
+	|                 |
+	└─────────────────┘
+	------------------------------------------ */
+
+/* 
+  used by the following pages:
+*/
+
+
+/*	------------------------------------------
+END : layout-1-column
+	------------------------------------------ */
+
+
+/*	------------------------------------------
+	LAYOUT: layout-2-column 
+	┌────────┬────────┐
+	|        |        |
+	|        |        |
+	|        |        |
+	|        |        |
+	|        |        |
+	└────────┴────────┘
+	------------------------------------------ */
+
+/* 
+  used by the following pages:
+*/
+
+.layout-2-column  #content,
+.layout-2-column  .col-1,
+.layout-2-column  #content-related,
+.layout-2-column  .col-2 {
+  float: left;
+}
+
+.layout-2-column  #content,
+.layout-2-column  .col-1 {
+  margin-left: @gutter;
+  .width(5);
+}
+
+.layout-2-column  #content-related,
+.layout-2-column  .col-2 {
+  margin-left: @gutter;
+  .width(5);
+}
+
+/*	------------------------------------------
+END : layout-2-column
+	------------------------------------------ */
+
+/*	------------------------------------------
+	LAYOUT: layout-3-column
+	┌─────────────────┐
+	|     |     |     |
+	|     |     |     |
+	|     |     |     |
+	|     |     |     |
+	|     |     |     |
+	└─────┴─────┴─────┘
+	------------------------------------------ */
+
+/* 
+  used by the following pages:
+*/
+
+.layout-3-column #content-subnav,
+.layout-3-column .col-1, 
+.layout-3-column #content,
+.layout-3-column .col-2,
+.layout-3-column #content-related,
+.layout-3-column .col-3 {
+  /*position: absolute;*/
+  float: left;
+  margin-left: @gutter;
+}
+
+.layout-3-column #content-subnav,
+.layout-3-column .col-1 {
+	.width(2);
+}
+
+.layout-3-column #content,
+.layout-3-column .col-2 {
+	.width(4);
+}
+
+.layout-3-column #content-related,
+.layout-3-column .col-3 {
+	.width(4);
+}
+
+/* end layout-3-column */
+
+/*	------------------------------------------
+	LAYOUT: layout-4-column
+	┌───┬────┬────┬───┐
+	|   |    |    |   |
+	|   |    |    |   |
+	|   |    |    |   |
+	|   |    |    |   |
+	|   |    |    |   |
+	└───┴────┴────┴───┘
+	------------------------------------------ */
+
+/* 
+  used by the following pages:
+*/
+
+.layout-4-column .col-1, 
+.layout-4-column .col-2,
+.layout-4-column .col-3,
+.layout-4-column .col-4 {
+  /*position: absolute;*/
+  float: left;
+  margin-left: @gutter;
+}
+
+.layout-4-column .col-1 {
+	.width(2);
+}
+
+.layout-4-column .col-2 {
+	.width(3);
+}
+
+.layout-4-column .col-3 {
+	.width(3);
+}
+
+.layout-4-column .col-4 {
+	.width(2);
+}
+
+/* end layout-4-column */
+
+/*	------------------------------------------
+	LAYOUT: layout-rhs-nav 
+	┌──────────┬──────┐
+	|          |      |
+	|          |      |
+	|          |      |
+	|          |      |
+	|          |      |
+	└──────────┴──────┘
+	------------------------------------------ */
+
+/* 
+  used by the following pages:
+*/
+
+.layout-rhs-nav  #content,
+.layout-rhs-nav  #content-related {
+  float: left;
+}
+
+.layout-rhs-nav  #content {
+  .width(6);
+}
+
+.layout-rhs-nav  #content-related {
+  margin-left: @gutter;
+  .width(4);
+}
+
+/*	------------------------------------------
+END : layout-rhs-nav
+	------------------------------------------ */
+
+
+/*	------------------------------------------
+	LAYOUT: layout-lhs-nav 
+	┌────┬────────────┐
+	|    |            |
+	|    |            |
+	|    |            |
+	|    |            |
+	|    |            |
+	└────┴────────────┘
+	------------------------------------------ */
+
+/* 
+  used by the following pages:
+*/
+
+.layout-lhs-nav  #content-subnav,
+.layout-lhs-nav  #content {
+  float: left;
+}
+
+.layout-lhs-nav  #content-subnav {
+  .width(2);
+}
+
+.layout-lhs-nav  #content {
+  margin-left: @gutter;
+  .width(8);
+}
+
+/*	------------------------------------------
+END : layout-lhs-nav
+	------------------------------------------ */	
+		
+/*	------------------------------------------
+LAYOUT: homepage-template-1
+------------------------------------------ */	
+
+.homepage-template-1 li {
+  list-style-type: none;
+  float: left;
+  background-color: #999;
+  margin-right: @gutter;
+}	
+
+.homepage-template-1 .promo-1 {
+  margin-left: @gutter;
+  .width(10);
+  .height(10);
+  .marginBottom(1);
+}
+
+.homepage-template-1 .promo-2 {
+  margin-left: @gutter;
+  .width(1);
+  .height(9);
+}
+
+.homepage-template-1 .promo-3 {
+  .width(1);
+  .height(9);
+}
+
+.homepage-template-1 .promo-4 {
+  .width(2);
+  .height(9);
+}
+
+.homepage-template-1 .promo-5 {
+  .width(6);
+  .height(9);
+}
+
+.homepage-template-1 .promo-6 {
+  .marginTop(1);
+  .marginLeft(1);
+  .width(8);
+  .height(9);
+  .marginBottom(1);
+}
+
+.homepage-template-1 .promo-7 {
+  margin-left: @gutter;
+  .width(5);
+  .height(5);
+}
+
+.homepage-template-1 .promo-8 {
+  .width(5);
+  .height(5);
+}
+
+/*	------------------------------------------
+END : homepage-template-1
+------------------------------------------ */	
+
+
+/*	------------------------------------------
+LAYOUT: homepage-template-2
+------------------------------------------ */	
+
+.homepage-template-2 li {
+  list-style-type: none;
+  float: left;
+  background-color: #999;
+  margin-right: @gutter;
+}	
+
+.homepage-template-2 .promo-1 {
+  margin-left: @gutter;
+  .width(5);
+  .height(10);
+  .marginBottom(1);
+}
+
+.homepage-template-2 .promo-2 {
+  .width(5);
+  .height(10);
+  .marginBottom(1);
+}
+
+.homepage-template-2 .promo-3 {
+  margin-left: @gutter;
+  .width(10);
+  .height(10);
+  .marginBottom(1);
+}
+
+.homepage-template-2 .promo-4 {
+  margin-left: @gutter;
+  .width(3);
+  .height(9);
+}
+
+.homepage-template-2 .promo-5 {
+  .width(4);
+  .height(9);
+}
+
+.homepage-template-2 .promo-6 {
+  .width(3);
+  .height(9);
+}
+
+.homepage-template-2 .promo-7 {
+  .marginTop(1);
+  margin-left: @gutter;
+  .width(10);
+  .height(2);
+}
+
+.homepage-template-2 .promo-8 {
+  .marginTop(1);
+  .marginBottom(1);
+  margin-left: @gutter;
+  .width(10);
+  .height(2);
+}
+
+/*	------------------------------------------
+END : homepage-template-2
+------------------------------------------ */

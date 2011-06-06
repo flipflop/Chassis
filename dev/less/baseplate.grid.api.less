@@ -1,0 +1,123 @@
+/*	------------------------------------------
+	LESS FUNCTIONS : Positioning
+	------------------------------------------ */
+
+	.top(@n: 0)	{
+	  top: @n * @baseline;
+	}
+	
+	.right(@n: 0)	{
+	  right: ((@column + @gutter) * @n) + @gutter;
+	}
+	
+	.bottom(@n: 0)	{
+	  bottom: @n * @baseline;
+	}
+	
+	.left(@n: 0)	{
+	  left: ((@column + @gutter) * @n) + @gutter;
+	}
+	
+	.gutterLeft(@n: 0)	{
+	  left: (@column + @gutter) * @n;
+	}
+	
+	.gutterRight(@n: 0)	{
+    right: (@column + @gutter) * @n;
+	}
+	
+	.firstGutterLeft() {
+	  left: @gutter;
+	}
+	
+	.lastGutterRight() {
+	  right: @gutter;
+	}
+	
+/*	------------------------------------------
+	LESS FUNCTIONS : Dimensions
+	------------------------------------------ */
+  	  
+  .contentWidth() {
+    width: @pageWidth;
+  }
+  
+  .contentWidthWithoutSideGutters() {
+    width: @pageWidth - (2 * @gutter);
+  }	
+  
+  .width(@n: 0)	{
+	  width: (@n * @column) + ((@n - 1) * @gutter);
+	}
+	
+	.height(@n: 0)	{
+	  height: @baseline * @n;
+	}
+
+/*	------------------------------------------
+	LESS FUNCTIONS : Margins and Padding
+	------------------------------------------ */		
+	
+	.marginTop(@n: 0)	{
+	  margin-top: @baseline * @n;
+	}
+	
+	.marginRight(@n: 0)	{
+	  margin-right: ((@column + @gutter) * @n) + @gutter;
+	}
+	
+	.marginBottom(@n: 0)	{
+	  margin-bottom: @baseline * @n;
+	}
+	
+  .marginLeft(@n: 0)	{
+    margin-left: ((@column + @gutter) * @n) + @gutter;
+	}
+	
+	.marginLeftGutter(@n: 0)	{
+	  margin-left: (@column + @gutter) * @n;
+	}
+	
+	.marginRightGutter(@n: 0)	{
+	   margin-right: (@column + @gutter) * @n;
+	}
+	
+	.firstGutterLeftMargin() {
+	  margin-left: @gutter;
+	}
+	
+	.lastGutterRightMargin() {
+	  margin-right: @gutter;
+	}
+	
+	.paddingLeftGutter(@n: 0)	{
+	  padding-left: (@column + @gutter) * @n - @gutter;
+	}
+	
+	.paddingRightGutter(@n: 0)	{
+	   padding-right: (@column + @gutter) * @n - @gutter;
+	}
+	
+	.paddingTop(@n: 0)	{
+	  padding-top: @baseline * @n;
+	}
+	
+	.paddingRight(@n: 0)	{
+	  padding-right: ((@column + @gutter) * @n);
+	}
+	
+	.paddingBottom(@n: 0)	{
+	  padding-bottom: @baseline * @n;
+	}
+	
+	.paddingLeft(@n: 0)	{
+	  padding-left: ((@column + @gutter) * @n);
+	}
+	
+	.firstGutterLeftPadding() {
+	  padding-left: @gutter;
+	}
+	
+	.lastGutterRightPadding() {
+	  padding-right: @gutter;
+	}

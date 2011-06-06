@@ -1,0 +1,225 @@
+@import "../../baseplate.env.constants.less";
+@import "../../baseplate.grid.api.less";
+@import "../../baseplate.grid.constants.less";
+	
+/* ----------------------------------------
+  BEGIN : generic page styles
+	----------------------------------------- */	
+	
+body {
+	background-color: #eee;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333;
+}
+  
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  color: #933;
+}  
+  
+h1,
+h2,
+h3, {  
+  font-family: 'League Gothic','Arial Narrow', Helvetica;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  font-size: 197%;
+}
+
+h3 {
+  font-size: 153.9%;
+}
+
+h1 {
+  color: #000;
+}
+
+h2 {
+  color: #333;
+}
+
+h3 {
+  color: #933;
+}
+
+p {
+  font-family: 'Calluna';
+  font-size: 138.5%;
+  color: #666;
+}
+
+ul li {
+  font-family: 'Calluna';
+  font-size: 123.1%;
+  color: #333;
+}
+
+/* added general focus state for Accessibility */
+a:focus, a:active, input:focus {
+	outline: 1px dotted #999!important;
+	-moz-outline:1px dotted #999;
+	text-decoration: none;
+}
+
+#wrapper {
+	text-align:center; 
+}
+
+#container {
+	position: relative;
+	margin: 0 auto;	
+	background-color: #fff;
+	display:inline-block; 
+	text-align: left;
+}
+
+#content-subnav, 
+#content,
+#content-related {
+  zoom: 1;
+}
+
+/*	
+  END : generic page styles
+  ------------------------------------------ */	
+	
+/* ----------------------------------------
+  BEGIN : Utilities
+	----------------------------------------- */
+
+  /* mitigate IE 5,6 double margin on floats bug */
+  .ie6 .floatfix {
+  	display: inline;
+  }
+
+  /* mitigate IE haslayout issues */
+  #container div, #container ul, #container ol {
+  	zoom: 1;
+  }
+
+  /* IR Images Off */
+  .ir-io {
+  	position: relative;
+  	font-size: 77%;
+  	font-weight: bold;
+  }
+
+  .ir-io span  {
+  	position: absolute;
+  	z-index: 49;
+  	display: block;
+  	top: 0;
+  	left: 0;
+  	/* standardised height */
+  	height: 20px;
+  	width: 100px;
+  	background: url("h_defaultimage.gif") 0 0 no-repeat;
+  }  
+
+/*	
+  END : Utilities
+  ------------------------------------------ */	
+
+/**
+ * 
+ * Page specific styles here 
+ *
+ */
+
+/* ----------------------------------------
+  BEGIN : .pg-chassis-home, .pg-baseplate-home
+	----------------------------------------- */
+
+.pg-chassis-home p,
+.pg-baseplate-home p {
+  .marginBottom(1);
+}
+
+.pg-chassis-home li, 
+.pg-baseplate-home li {
+  margin-left: @gutter*2;
+  .marginBottom(1);
+}
+
+
+.pg-chassis-home h1, 
+.pg-chassis-home h2,
+.pg-baseplate-home h1, 
+.pg-baseplate-home h2 {
+  .marginBottom(1);
+}
+
+.pg-baseplate-home .logo {
+  .width(2); /* example of image re-sizing */
+}
+
+.pg-chassis-home .logo {
+  .marginTop(.5);
+  .marginBottom(.5);
+  margin-left: @column/4;
+  .width(3.5); /* example of image re-sizing */
+}
+
+.pg-chassis-home .theapi,
+.pg-baseplate-home .theapi {
+  list-style-type: none;
+  padding-left: @column/2;
+}
+
+.pg-chassis-home .theapi li,
+.pg-baseplate-home .theapi li {
+  margin-left: 0;
+}
+
+.pg-chassis-home #header blockquote,
+.pg-baseplate-home #header blockquote {
+  text-align: center;
+  /*
+  border-left: @gutter solid #933;
+  border-right: @gutter solid #933;
+  */
+}
+
+.pg-chassis-home #header blockquote p, 
+.pg-baseplate-home #header blockquote p {
+  color: #eee;
+  font-size: 153.9%;
+}
+
+.pg-chassis-home code span,
+.pg-baseplate-home code span {
+  color: #933;
+}
+
+.pg-chassis-home #content-subnav a {
+  position: relative;
+  .top(-3);
+}
+
+/*	
+  END : .pg-chassis-home, .pg-baseplate-home
+  ------------------------------------------ */
+  
+/* ----------------------------------------
+  BEGIN : .pg-home
+	----------------------------------------- */
+
+.pg-home .template li p {
+  color: #eee;
+  text-align: center;
+}
+
+.pg-home h1 {
+  text-align: center;
+  .marginBottom(1);
+}  
+
+/*	
+  END : .pg-home
+  ------------------------------------------ */

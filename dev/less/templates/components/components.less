@@ -1,0 +1,183 @@
+@import "../../baseplate.env.constants.less";
+@import "../../baseplate.grid.api.less";
+@import "../../baseplate.grid.constants.less";
+
+/* Component: skip links */
+#skiplinks { 
+	position: absolute;
+	top: 0;
+	z-index: 5;
+}
+
+#skiplinks ul li { 
+	font-size: 108%;
+	list-style: none;
+}
+
+#skiplinks ul li a { 
+	position: absolute;
+	left: -1000em;
+	z-index: 48; /* don't use z-index above 50 : reserved for assitive technology */
+	white-space: nowrap;
+	color: #333;
+	opacity: .85;
+	filter:alpha(opacity=85);
+	line-height: 14px;
+	padding: 3px;
+	border-bottom: 1px solid #333;
+	border-right: 1px solid #333;
+}
+
+#skiplinks ul li a:focus,
+#skiplinks ul li a:active {
+	top: 0;
+	left: 0;
+	background-color: #eee;
+}
+
+/* end Component: skip links */
+
+/*******************************************************
+ * BEGIN CHASSIS & BASEPLATE STYLES
+ *******************************************************/
+
+.pg-chassis-home #header, 
+.pg-baseplate-home #header {
+  position: absolute; /* can only do this if header does not change in height */
+  /* note: page is coded content first - padding is set in layouts.less */
+  .height(4); 
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.pg-chassis-home #header h1,
+.pg-baseplate-home #header h1 {
+  .marginTop(1);
+  position: relative;
+  .left(3);
+}
+
+.pg-chassis-home #header blockquote, 
+.pg-baseplate-home #header blockquote {
+  width: (((@column+@gutter)*6)+@gutter);
+  .marginLeftGutter(2); /* gutter position example */
+  .height(3);
+  border: 1px solid;
+  background-color: #333;
+  border-radius: 0px 0px 18px 18px;
+  -moz-border-radius: 0px 0px 18px 18px;
+  -webkit-border-bottom-right-radius: 18px;
+  -webkit-border-bottom-left-radius: 18px;
+}
+
+.pg-chassis-home #header blockquote p,
+.pg-baseplate-home #header blockquote p {
+  .paddingTop(1);
+}
+
+/* end header .pg-baseplate-home */
+
+/*******************************************************
+ * Footer .pg-baseplate-home
+ *******************************************************/
+
+.pg-chassis-home #footer,
+.pg-baseplate-home #footer {
+  .marginTop(1);
+  .paddingBottom(2);
+  clear: both;
+  width: (((@column+@gutter)*6)+@gutter);
+  .marginLeftGutter(2); /* gutter position example */
+  border: 1px solid;
+  background-color: #333;
+  border-radius: 18px 18px 0px 0px;
+  -moz-border-radius: 18px 18px 0px 0px;
+  -webkit-border-top-right-radius: 18px;
+  -webkit-border-top-left-radius: 18px;
+}
+
+.pg-chassis-home #footer h3,
+.pg-baseplate-home #footer h3 {
+  color: #999;
+}
+
+.pg-chassis-home #footer h3, 
+.pg-chassis-home #footer ul,
+.pg-baseplate-home #footer h3, 
+.pg-baseplate-home #footer ul {
+  position: relative;
+  .top(1);
+  .left(1.5);
+}
+
+.pg-chassis-home #footer ul li, 
+.pg-baseplate-home #footer ul li {
+  color: #fff;
+}
+
+.pg-chassis-home #content h3,
+.pg-chassis-home #content-related h3,
+.pg-baseplate-home #content-related h3 {
+  .marginBottom(1);
+}
+
+.pg-chassis-home #content-related ul,
+.pg-baseplate-home #content-related ul {
+  .marginBottom(1);
+}
+
+
+.pg-chassis-home #content-related li,
+.pg-chassis-home #footer li,
+.pg-baseplate-home #content-related li,
+.pg-baseplate-home #footer li {
+  margin-bottom: 0;
+}
+
+.pg-baseplate-home #content-related {
+  .marginBottom(1);
+}
+
+/* END CHASSIS & BASEPLATE STYLES */
+
+/* ----------------------------------------
+  BEGIN : header
+	----------------------------------------- */
+
+#header {
+  position: absolute;
+  top: 0;
+  .height(4);
+  .contentWidth();
+}
+
+#header ul li {
+  list-style-type: none;
+  float: left;
+}
+
+#header #logo img {
+  float: left;
+  .firstGutterLeftMargin();
+  .marginTop(1);
+  .height(3);
+  .width(2);
+}
+
+/*	
+  END : header
+  ------------------------------------------ */
+  
+/* ----------------------------------------
+  BEGIN : footer
+	----------------------------------------- */
+
+.pg-home #footer {
+  text-align: center;
+}
+
+/*	
+  END : footer
+  ------------------------------------------ */
+
