@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;div id="footer" role="contentinfo"&gt;
+	&lt;span id="copyright"&gt;Copyright 2011 Chassis&lt;/span&gt;
+	&lt;ul class="links"&gt;
+		&lt;li class="first-child"&gt;&lt;a href=""&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=""&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=""&gt;Link 3&lt;/a&gt;&lt;/li&gt; 
+		&lt;li&gt;&lt;a href=""&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="last-child"&gt;&lt;a href=""&gt;Link 5&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt; 
+&lt;/div&gt;&lt;!-- id="footer" --&gt;
+</string>
+	<key>name</key>
+	<string>footer</string>
+	<key>tabTrigger</key>
+	<string>footer</string>
+	<key>uuid</key>
+	<string>CD0511AF-D3B6-483B-A52E-5C12B623DF10</string>
+</dict>
+</plist>

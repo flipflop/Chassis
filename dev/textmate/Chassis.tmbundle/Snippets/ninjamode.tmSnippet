@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/* JS MODULE WITH $ execution context within closure */
+;(function ( \$, doc ) { // add in more parameters for context e.g. ( container, document, jQuery, utils )
+  /* place jQuery scripts below */
+  
+  \$(function() { // jQuery DOM ready 
+    
+  });
+  
+  /* end Ninja mode */
+}( jQuery, document ));  
+</string>
+	<key>name</key>
+	<string>ninjamode</string>
+	<key>tabTrigger</key>
+	<string>ninjamode</string>
+	<key>uuid</key>
+	<string>73E02C92-A075-4037-8EEB-047BAC5BB199</string>
+</dict>
+</plist>

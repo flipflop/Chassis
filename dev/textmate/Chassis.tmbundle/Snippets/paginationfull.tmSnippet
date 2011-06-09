@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;!-- Full Pagination --&gt;
+&lt;div class="pagination"&gt;
+	&lt;div class="controls"&gt; &lt;!-- replace with class "alignleft" or "alignright" to align --&gt;
+		&lt;ol&gt;
+			&lt;li class="previous"&gt;&lt;a href="#"&gt;Previous&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=""&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+			&lt;li class="ellipsis"&gt;&lt;span&gt;...&lt;/span&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;40&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;41&lt;/a&gt;&lt;/li&gt;
+			&lt;li class="selected"&gt;&lt;a href="#"&gt;42&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;43&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;44&lt;/a&gt;&lt;/li&gt;
+			&lt;li class="ellipsis"&gt;&lt;span&gt;...&lt;/span&gt;&lt;/li&gt;
+			&lt;li class=""&gt;&lt;a href="#"&gt;99&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=""&gt;&lt;a href="#"&gt;99&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=""&gt;&lt;a href="#"&gt;99&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=""&gt;&lt;a href="#"&gt;99&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=""&gt;&lt;a href="#"&gt;99&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=""&gt;&lt;a href="#"&gt;99&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=""&gt;&lt;a href="#"&gt;99&lt;/a&gt;&lt;/li&gt;
+			&lt;li class="next"&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
+		&lt;/ol&gt;								
+	&lt;/div&gt;
+&lt;/div&gt;&lt;!-- class="pagination" --&gt;
+</string>
+	<key>name</key>
+	<string>paginationfull</string>
+	<key>tabTrigger</key>
+	<string>paginationfull</string>
+	<key>uuid</key>
+	<string>57009FCD-8037-4106-93BB-52A34ECE3CD6</string>
+</dict>
+</plist>

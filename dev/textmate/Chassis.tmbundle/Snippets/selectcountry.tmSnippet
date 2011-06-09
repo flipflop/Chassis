@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;div id="select-country"&gt;
+	
+	&lt;label for="select-language"&gt;Language:&lt;/label&gt;
+	
+	&lt;select id="select-language"&gt;
+	   	&lt;option value=""&gt;Select Country&lt;/option&gt;
+		&lt;option value="en-gb"&gt;UK&lt;/option&gt;
+		&lt;option value="en-us"&gt;UK&lt;/option&gt;
+		&lt;option value="de"&gt;Germany&lt;/option&gt;
+		&lt;option value="fr"&gt;France&lt;/option&gt;
+		&lt;option value="es"&gt;Spain&lt;/option&gt;
+	&lt;/select&gt;
+	
+	&lt;div class="action"&gt;
+		&lt;input class="primary" type="submit" value="Select" /&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;&lt;!-- id="select-country" --&gt;	
+</string>
+	<key>name</key>
+	<string>selectcountry</string>
+	<key>tabTrigger</key>
+	<string>selectcountry</string>
+	<key>uuid</key>
+	<string>C4B3EFDF-ACFB-4886-9330-BB0A4827471E</string>
+</dict>
+</plist>

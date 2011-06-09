@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;!-- 'message-error' contextual class for error message styles --&gt;
+&lt;div class="message-area"&gt;
+	&lt;!-- generic message area for error messages e.g. "please correct the following", 
+		order information e.g. "2 items in basket" --&gt;	
+	&lt;p&gt;
+		&lt;span class="items"&gt;You have (2) items in your basket, with a subtotal of &lt;/span&gt;
+		&lt;abbr title="GBP"&gt;&lt;span class="currency"&gt;&amp;pound;&lt;/span&gt;&lt;/abbr&gt;&lt;span id="trolleyprice"&gt;475.00&lt;/span&gt;
+	&lt;/p&gt;
+	
+&lt;/div&gt;&lt;!-- class="message-area" --&gt;
+</string>
+	<key>name</key>
+	<string>messagearea</string>
+	<key>tabTrigger</key>
+	<string>messagearea</string>
+	<key>uuid</key>
+	<string>2677CCB0-1E95-4487-BA00-054ACE486149</string>
+</dict>
+</plist>

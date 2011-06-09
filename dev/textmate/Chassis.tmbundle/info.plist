@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Chassis</string>
+	<key>ordering</key>
+	<array>
+		<string>B4A117AA-B86F-4815-84D5-7FF8ACE61C0D</string>
+		<string>4A99DF16-5812-4858-8D59-FD18B7315780</string>
+		<string>7B3C9802-708C-4931-9332-4D4EFF20A4B4</string>
+		<string>CD0511AF-D3B6-483B-A52E-5C12B623DF10</string>
+		<string>E0958FBA-BF02-4ADE-B978-397A7A68112A</string>
+		<string>A162C34E-2F51-4916-8DBA-9DE818418431</string>
+		<string>797E25DD-DF48-47DA-B7AA-CBC3C96D0503</string>
+		<string>2677CCB0-1E95-4487-BA00-054ACE486149</string>
+		<string>37EB9BA4-4786-4102-911D-5F5F4AB25603</string>
+		<string>73E02C92-A075-4037-8EEB-047BAC5BB199</string>
+		<string>FED9C652-32BA-45F1-A8BD-25F296F4F827</string>
+		<string>57009FCD-8037-4106-93BB-52A34ECE3CD6</string>
+		<string>A4679063-6B56-4884-93B1-55AB55826728</string>
+		<string>9EF1F90F-FF97-47CA-9841-35D7E0279070</string>
+		<string>C4B3EFDF-ACFB-4886-9330-BB0A4827471E</string>
+		<string>A870D0DB-90FC-4DFA-B23E-B79A2453E07E</string>
+	</array>
+	<key>uuid</key>
+	<string>0CEF6754-DC75-41DA-942B-16C9D1BEAF24</string>
+</dict>
+</plist>

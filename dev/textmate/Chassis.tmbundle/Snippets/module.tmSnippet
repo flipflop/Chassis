@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/* 
+ * Advanced Module pattern (public and private members within a namespace)
+ * Creates chassis.${1} namespace
+ * Note: ; before parenthesis is deliberate
+ * 
+ * Below is an example of a flexible multi-part module that can be loaded 
+ * in any order with loose augmentation. 
+ * 
+ */
+
+;(function ( container, \$, doc ) { // add in more parameters for context e.g. ( container, jQuery, document, undefined )
+
+	function createModule()  { // Revealing Module Pattern with execution context passed in arguments
+		var localVar1 = "local variable",
+		localVar1 = "public variable",
+		init = function() {
+		  // -------- add pass through JS here (follows execution order of page)
+		  
+		  
+		  // --------
+		  \$(function() {
+		    // add DOM ready init code here
+		    addEvents();
+		  });
+		
+		}(); // self invoking
+		
+		function addEvents() {
+
+		} // end addEvents()
+
+		function display() {
+
+		} // end display()
+		
+	  function saveData() {
+       /* persistence management */
+
+    } // end saveData()
+
+    function destroy() { // Public method
+       /* clean up namespace for garbage collection */
+    	chassis.example = null;
+    } // end destroy()
+
+    function destroyOnUnload() { // Private method
+       \$(window).unload(function() {
+         chassis.${1}.destroy();
+       });
+    } // destroyOnUnload()
+
+		var contract = { // add public methods / properties here (remove if not needed)
+			addEvents : addEvents,
+			destroy : destroy
+		}
+
+		// Public interface (properties and methods)
+		return contract;
+
+	} // end module
+
+	// Public API (assigns to my namespace)
+	container.${1:name} = createModule();
+
+})( this.chassis || (this.chassis = {}), jQuery, document, undefined ); // end chassis.${1} (create namespace and context)
+// end chassis.${1}</string>
+	<key>name</key>
+	<string>module</string>
+	<key>tabTrigger</key>
+	<string>module</string>
+	<key>uuid</key>
+	<string>37EB9BA4-4786-4102-911D-5F5F4AB25603</string>
+</dict>
+</plist>

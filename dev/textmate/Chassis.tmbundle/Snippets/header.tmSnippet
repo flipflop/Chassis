@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;div id="header" role="banner"&gt;
+	
+	&lt;a href="http://www.site.com" id="logo"&gt;&lt;img src="img/site-logo.png" alt="Site" /&gt;&lt;/a&gt;
+	
+	&lt;ul class="links"&gt;
+		&lt;li class="first-child"&gt;&lt;a href=""&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=""&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=""&gt;Link 3&lt;/a&gt;&lt;/li&gt; 
+		&lt;li&gt;&lt;a href=""&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="last-child"&gt;&lt;a href=""&gt;Link 5&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt; 
+&lt;/div&gt;&lt;!-- id="header" --&gt;
+</string>
+	<key>name</key>
+	<string>header</string>
+	<key>tabTrigger</key>
+	<string>header</string>
+	<key>uuid</key>
+	<string>E0958FBA-BF02-4ADE-B978-397A7A68112A</string>
+</dict>
+</plist>

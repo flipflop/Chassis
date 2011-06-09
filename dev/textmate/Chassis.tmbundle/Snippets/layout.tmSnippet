@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;div id="wrapper" class="layout-${1:class}"&gt;&lt;!-- wrapper used to provide extra stylistic hooks e.g. LHS and RHS shadows --&gt;
+	&lt;!-- contextual CSS (Class names must remain in the correct order)
+		en-gb : language (e.g. en-us)
+		chassis : site name (e.g. baseplate)
+		pg-home : page name (e.g. pg-home)
+		home : section (e.g. home, checkout, registration, search, browse)
+		cat-1 : category context (category name agnostic to cater for category changes)
+		cat-1-2 : sub category context (category name agnostic to cater for category changes)
+		cms-seasonal : seasonal skin (allows overriding of all layout components e.g. Christmas and Summer styles for Header)
+	--&gt;
+	&lt;div id="container" class="en-gb chassis home pg-home cat-1 cat-1-2 cms-seasonal"&gt;&lt;!-- to allow for customised seasonal layouts --&gt;
+
+		&lt;div id="main"&gt;&lt;!-- components: source order important for layout, order can be changed to cater for new layout requirements --&gt;
+			
+			&lt;!-- ommit content-subnav and content-related for single column layouts --&gt;
+
+			&lt;div id="content-subnav" class="aside"&gt;
+				&lt;!-- side navigation (e.g. facetted navigation) --&gt;
+			&lt;/div&gt;&lt;!-- id="content-subnav" --&gt;
+						
+			&lt;div id="content" role="main"&gt;
+				&lt;!-- main content --&gt;
+				&lt;?php include("../chassis/templates/components/${2:component}.php"); ?&gt;
+			&lt;/div&gt;&lt;!-- id="content" --&gt;
+			
+			&lt;div id="content-related" class="aside" role="complementary"&gt;
+				&lt;!-- additional related content (e.g. RHS navigation, related products and delivery information) --&gt;
+			&lt;/div&gt;&lt;!-- id="content-related" --&gt;
+			
+		&lt;/div&gt;&lt;!-- id="main" --&gt;
+		
+			&lt;?php include("../chassis/templates/components/header.php"); ?&gt;
+		
+			&lt;?php include("../chassis/templates/components/footer.php"); ?&gt;
+
+	&lt;/div&gt;&lt;!-- id="container" --&gt;
+	
+&lt;/div&gt;&lt;!-- id="wrapper" class="layout-${1}" --&gt;
+</string>
+	<key>name</key>
+	<string>layout</string>
+	<key>tabTrigger</key>
+	<string>layout</string>
+	<key>uuid</key>
+	<string>A162C34E-2F51-4916-8DBA-9DE818418431</string>
+</dict>
+</plist>

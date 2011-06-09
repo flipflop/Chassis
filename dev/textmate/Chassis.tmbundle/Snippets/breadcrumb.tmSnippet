@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;!-- begin class="breadcrumb" - an ordered list is used for hierarchical data - strong used to emphasise current context --&gt;
+&lt;!-- Note: for current category remove anchor tag on last element --&gt;
+&lt;!-- strong tag used for Accessibility support --&gt;
+&lt;div class="breadcrumb"&gt;
+	&lt;ol&gt;
+		&lt;li class="first-child"&gt;&lt;a href=""&gt;Category 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=""&gt;Category 2&lt;/a&gt;&lt;/li&gt; 
+		&lt;li&gt;&lt;a href=""&gt;Category 3&lt;/a&gt;&lt;/li&gt; 
+		&lt;li class="last-child"&gt;&lt;a href=""&gt;&lt;strong&gt;Category 4&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;/ol&gt;
+&lt;/div&gt;&lt;!-- class="breadcrumb" --&gt;</string>
+	<key>name</key>
+	<string>breadcrumb</string>
+	<key>tabTrigger</key>
+	<string>breadcrumb</string>
+	<key>uuid</key>
+	<string>7B3C9802-708C-4931-9332-4D4EFF20A4B4</string>
+</dict>
+</plist>

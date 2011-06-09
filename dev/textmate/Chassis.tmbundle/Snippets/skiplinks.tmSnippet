@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;!-- begin Component: Accessibility links --&gt;
+&lt;div id="skiplinks"&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href="#header"&gt;Jump to main navigation&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#main"&gt;Jump to main content&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#footer"&gt;Jump to footer&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+&lt;!-- end Component accessibility links --&gt;
+</string>
+	<key>name</key>
+	<string>skiplinks</string>
+	<key>tabTrigger</key>
+	<string>skiplinks</string>
+	<key>uuid</key>
+	<string>A870D0DB-90FC-4DFA-B23E-B79A2453E07E</string>
+</dict>
+</plist>

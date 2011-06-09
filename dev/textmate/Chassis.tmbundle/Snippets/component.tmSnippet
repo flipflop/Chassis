@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/**
+ * Component : chassis.${1:name}
+ * 
+ * Description: ${2:desc}
+ *  
+ * @param $ {Object} reference to jQuery
+ * @param doc {Object} document object 
+ * @return 
+ */
+
+;(function ( container, \$, doc ) { // add in more parameters for context e.g. ( container, document, jQuery, utils )
+
+  function createModule()  { // Revealing Module Pattern with execution context passed in arguments
+
+        // All methods and properties (variables) are private unless within return statement
+        var init = function() {
+
+          $(function() { // Private DOM ready
+     
+          }); 
+  
+        }(); // end init() // self invokes
+
+        function create() { // Private method
+
+        } // end create()
+
+        function enable() { // Private method
+
+        } // end enable()
+
+        function disable() { // Private method
+
+        } // end disable()
+
+        function addEvents() { // Private method
+
+        } // end addEvents()
+
+        function display() { // Private method
+
+        } // end display()
+
+        function saveData() { // Private method
+           /* persistence management */
+
+        } // end saveData()
+
+        function destroy() { // Public method
+           /* clean up namespace for garbage collection */
+        	chassis.${1} = null;
+        } // end destroy()
+
+        function destroyOnUnload() { // Private method
+           $(window).unload(function() {
+             chassis.${1}.destroy();
+           });
+        } // destroyOnUnload()
+  
+        // public interface
+        var contract = {
+        	destroy : destroy // public method
+        }
+
+  		// Public interface (properties and methods)
+  		return contract;
+
+    } // end module
+
+	// Public API (assigns to my namespace)
+	container.${1} = createModule();
+
+})( this.chassis || (this.chassis = {}), jQuery, document, undefined ); // create namespace and context
+// end chassis.${1}</string>
+	<key>name</key>
+	<string>component</string>
+	<key>tabTrigger</key>
+	<string>component</string>
+	<key>uuid</key>
+	<string>A0E7F025-FBED-45C5-ACCC-C024A6C637DB</string>
+</dict>
+</plist>

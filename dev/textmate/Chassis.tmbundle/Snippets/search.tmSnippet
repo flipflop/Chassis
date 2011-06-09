@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;div id="search"&gt;				
+	&lt;form id="site-search" name="search" action="/Search"&gt;
+		&lt;fieldset title="Search"&gt;
+			&lt;label for="search-field"&gt;Search&lt;/label&gt;
+			
+			&lt;input type="text" id="search-field" name="search-terms" size="30" maxlength="128" value="Enter keywords" /&gt;
+			&lt;input type="submit" value="Search" id="btn-search" title="Search" /&gt;
+		&lt;/fieldset&gt;
+	&lt;/form&gt;					
+&lt;/div&gt;&lt;!-- end id="search" --&gt;
+</string>
+	<key>name</key>
+	<string>search</string>
+	<key>tabTrigger</key>
+	<string>search</string>
+	<key>uuid</key>
+	<string>9EF1F90F-FF97-47CA-9841-35D7E0279070</string>
+</dict>
+</plist>

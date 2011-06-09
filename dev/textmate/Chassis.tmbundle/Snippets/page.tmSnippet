@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;!doctype html&gt;
+&lt;!--[if IEMobile]&gt; &lt;html class="no-js ie-mobile" lang="en"&gt; &lt;![endif]--&gt;
+&lt;!--[if (lt IE 7)&amp;!(IEMobile) ]&gt; &lt;html class="no-js ie6" lang="en"&gt; &lt;![endif]--&gt;
+&lt;!--[if (IE 7)&amp;!(IEMobile) ]&gt; &lt;html class="no-js ie7" lang="en"&gt; &lt;![endif]--&gt;
+&lt;!--[if (IE 8)&amp;!(IEMobile) ]&gt; &lt;html class="no-js ie8" lang="en"&gt; &lt;![endif]--&gt;
+&lt;!--[if (gte IE 9)|!(IE)]&gt;&lt;!--&gt; &lt;html class="no-js" lang="en"&gt; &lt;!--&lt;![endif]--&gt;
+&lt;head&gt;
+	&lt;title&gt;${1:pagename}&lt;/title&gt;
+	
+	&lt;?php include("includes/head.php"); ?&gt;
+	
+	&lt;!-- development QA only (remove), not for production use --&gt;
+	&lt;link rel="stylesheet" href="dev/css/debug.css" /&gt;
+
+    &lt;!-- Less CSS: for development only, should not be used on production (uncomment to use Less.js) --&gt; 
+    &lt;!--  
+    &lt;link rel="stylesheet/less" type="text/css" href="dev/less/templates/layouts/layouts.less" /&gt;
+    &lt;link rel="stylesheet/less" type="text/css" href="dev/less/templates/components/components.less" /&gt;
+    &lt;link rel="stylesheet/less" type="text/css" href="dev/less/templates/pages/pages.less" /&gt;
+     
+     
+    &lt;script src="dev/less/less.js"&gt;&lt;/script&gt;
+    &lt;script&gt; less.env = "development"; less.watch(); &lt;/script&gt;
+    --&gt;
+
+    &lt;?php
+		/* Less PHP docs : http://leafo.net/lessphp/ */
+		require 'dev/less/lessc.inc.php';
+		$less1 = new lessc('dev/less/templates/layouts/layouts.less');
+		file_put_contents('css/templates/layouts/layouts.css', $less1-&gt;parse());
+		
+		$less2 = new lessc('dev/less/templates/components/components.less');
+		file_put_contents('css/templates/components/components.css', $less2-&gt;parse());
+		
+		$less3 = new lessc('dev/less/templates/pages/pages.less');
+		file_put_contents('css/templates/pages/pages.css', $less3-&gt;parse());
+	?&gt;
+	
+	&lt;!-- Compiled Less CSS --&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/templates/layouts/layouts.css" /&gt; 
+	&lt;link rel="stylesheet" type="text/css" href="css/templates/components/components.css" /&gt;
+    &lt;link rel="stylesheet" type="text/css" href="css/templates/pages/pages.css" /&gt;
+    
+&lt;/head&gt;
+
+&lt;body class="cms-bg-1 debug-grid"&gt;
+		
+	&lt;?php include("templates/components/skip-links.php"); ?&gt;
+	
+	&lt;!-- layout ${2}--&gt;
+	&lt;?php include("templates/layouts/${2:layoutname}.php"); ?&gt;
+	&lt;!--
+	/** 
+	 * Notes:
+	 * scripts at bottom - yahoo performance guideline
+	 * use short namespaces to reduce lookup resolution
+	 * locally scoped variables are more performant than globals
+	 *
+	 * TODO: minify and use Closure Compiler to reduce size and speed up execution
+	 */
+	--&gt;
+	&lt;?php include("includes/scripts.php"); ?&gt;
+
+	&lt;script&gt;
+	  var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
+	  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+	  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	  s.parentNode.insertBefore(g,s)}(document,'script'));
+	&lt;/script&gt;
+	
+	&lt;!-- JavaScript for page specific components --&gt;
+	&lt;script src="js/templates/layouts/homepage.js"&gt;&lt;/script&gt;
+	
+	&lt;!-- begin Development QA only - not for production --&gt;
+	&lt;?php include("dev/test/chassis-qunit.php"); ?&gt;
+	&lt;!-- end Development QA only - not for production --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</string>
+	<key>name</key>
+	<string>page</string>
+	<key>tabTrigger</key>
+	<string>page</string>
+	<key>uuid</key>
+	<string>FED9C652-32BA-45F1-A8BD-25F296F4F827</string>
+</dict>
+</plist>

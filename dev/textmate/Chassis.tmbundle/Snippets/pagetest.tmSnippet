@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/*	------------------------------------------
+  PAGE : BEGIN ${1} TEST CASES
+  	------------------------------------------ */
+  if (pageName == "pg-${1:pagename}") { // UPDATE PAGE NAME CHECK
+    
+    module("Layouts");
+
+    test("Page and Layout UI tests", function() {
+      //log('Layout tests.' );
+      equals( \$("#wrapper").attr("class"), "layout-${2:layout}", 'layout: layout-${2:layout} present' );  
+    });
+
+    module("Components");
+
+    test("Component UI tests", function() {
+        ok(\$("*[data-component-name='skip-links']")[0],"Component: skip-links present");
+        ok(\$("*[data-component-name='process-flow']")[0],"Component: process-flow present");
+        ok(\$("*[data-component-name='message-area']")[0],"Component: message-area (1) present");
+        ok(\$("*[data-component-name='message-area']")[1],"Component: message-area (2) present");
+        ok(\$("*[data-component-name='message-area']")[2],"Component: message-area (3) present");
+        ok(\$("*[data-component-name='header']")[0],"Component: header present");
+        ok(\$("*[data-component-name='footer']")[0],"Component: footer present");  
+    });
+  } // end if (pageName == "pg-${1}")
+  
+  /*	------------------------------------------
+   PAGE : END ${1} TEST CASES
+   	------------------------------------------ */</string>
+	<key>name</key>
+	<string>pagetest</string>
+	<key>tabTrigger</key>
+	<string>pagetest</string>
+	<key>uuid</key>
+	<string>4A99DF16-5812-4858-8D59-FD18B7315780</string>
+</dict>
+</plist>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;!-- begin class="breadcrumb" - an ordered list is used for hierarchical data - strong used to emphasise current context --&gt;
+&lt;!-- Note: for current category remove anchor tag on last element --&gt;
+&lt;!-- spans used to provide extra stylistic hooks for IR support --&gt;
+&lt;!-- strong tag used for Accessibility support --&gt;
+&lt;!-- current-step-&lt;n&gt; provides styling context for whole container (e.g. to highlight a list item step-&lt;n&gt;) --&gt; 	 
+&lt;div class="process-flow current-step-1"&gt;
+	&lt;ol&gt;
+		&lt;li class="step-1 first-child"&gt;&lt;a href=""&gt;&lt;strong&gt;Step 1&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="step-2"&gt;&lt;a href=""&gt;&lt;span&gt;Step 2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; 
+		&lt;li class="step-3"&gt;&lt;a href=""&gt;&lt;span&gt;Step 3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; 
+		&lt;li class="step-4 last-child"&gt;&lt;a href=""&gt;&lt;span&gt;Step 4&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;/ol&gt;
+&lt;/div&gt;&lt;!-- class="process-flow" --&gt;</string>
+	<key>name</key>
+	<string>processflow</string>
+	<key>tabTrigger</key>
+	<string>processflow</string>
+	<key>uuid</key>
+	<string>A4679063-6B56-4884-93B1-55AB55826728</string>
+</dict>
+</plist>
