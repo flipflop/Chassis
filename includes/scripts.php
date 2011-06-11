@@ -3,6 +3,7 @@
 <script>window.jQuery || document.write('<script src="js/lib/jquery-min.js">\x3C/script>')</script>
 <script src="js/chassis.js"></script>  
 <script src="js/site.js"></script>
+<script src="js/templates/components/search/search.js"></script>
 <!-- end scripts-->
 
 <!-- development QA only (remove), not for production use -->
