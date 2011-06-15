@@ -9,9 +9,9 @@ IE rendering. Not recommended: may be required to testing deltas.
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <link rel="search" type="application/opensearchdescription+xml" title="Site Search" href="http://www.site.com/osd.xml" />	
-<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="shortcut icon" href="favicon.ico" />
 
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="apple-touch-startup-image" href="img/startup.png" />
 <link rel="apple-touch-startup-image" href="img/Default-Portrait.png" />
   

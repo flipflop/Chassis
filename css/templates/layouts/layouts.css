@@ -28,20 +28,20 @@
 .lastGutterRightPadding { padding-right:10px; }
 .debug-grid-body {
   background-image:-webkit-linear-gradient(rgba(0,0,0,0.4) 1px,transparent 1px), -webkit-linear-gradient(0,rgba(0,0,255,0.4) 1px,transparent 1px), -webkit-linear-gradient(rgba(0,0,0,0.3) 1px,transparent 1px), -webkit-linear-gradient(0,rgba(0,0,255,0.3) 1px,transparent 1px);
-  background-size:90px 90px, 90px 90px, 18px 18px, 18px 18px;
-  -moz-background-size:90px 90px, 90px 90px, 18px 18px, 18px 18px;
+  background-size:120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  -moz-background-size:120px 120px, 120px 120px, 24px 24px, 24px 24px;
 }
 .debug-grid #container {
   background-image:-moz-linear-gradient(rgba(0,0,0,0.3) 1px,transparent 1px), -moz-linear-gradient(0,rgba(0,0,0,0.1) 10px,transparent 1px);
   background-image:-webkit-linear-gradient(rgba(0,0,0,0.3) 1px,transparent 1px), -webkit-linear-gradient(0,rgba(0,0,0,0.1) 10px,transparent 1px);
   background-image:-o-linear-gradient(rgba(0,0,0,0.3) 1px,transparent 1px), -o-linear-gradient(0,rgba(0,0,0,0.1) 10px,transparent 1px);
-  background-size:18px 18px, 95px 85px;
-  -moz-background-size:18px 18px, 95px 85px;
+  background-size:24px 24px, 95px 85px;
+  -moz-background-size:24px 24px, 95px 85px;
 }
-body { line-height:18px; }
+body { line-height:24px; }
 #container {
   width:960px;
-  padding-top:72px;
+  padding-top:96px;
 }
 .layout-2-column  #content, .layout-2-column  .col-1 {
   float:left;
@@ -115,41 +115,41 @@ body { line-height:18px; }
 .homepage-template-1 .promo-1 {
   margin-left:10px;
   width:940px;
-  height:180px;
-  margin-bottom:18px;
+  height:240px;
+  margin-bottom:24px;
 }
 .homepage-template-1 .promo-2 {
   margin-left:10px;
   width:85px;
-  height:162px;
+  height:216px;
 }
 .homepage-template-1 .promo-3 {
   width:85px;
-  height:162px;
+  height:216px;
 }
 .homepage-template-1 .promo-4 {
   width:180px;
-  height:162px;
+  height:216px;
 }
 .homepage-template-1 .promo-5 {
   width:560px;
-  height:162px;
+  height:216px;
 }
 .homepage-template-1 .promo-6 {
-  margin-top:18px;
+  margin-top:24px;
   margin-left:105px;
   width:750px;
-  height:162px;
-  margin-bottom:18px;
+  height:216px;
+  margin-bottom:24px;
 }
 .homepage-template-1 .promo-7 {
   margin-left:10px;
   width:465px;
-  height:90px;
+  height:120px;
 }
 .homepage-template-1 .promo-8 {
   width:465px;
-  height:90px;
+  height:120px;
 }
 .homepage-template-2 li {
   list-style-type:none;
@@ -160,43 +160,43 @@ body { line-height:18px; }
 .homepage-template-2 .promo-1 {
   margin-left:10px;
   width:465px;
-  height:180px;
-  margin-bottom:18px;
+  height:240px;
+  margin-bottom:24px;
 }
 .homepage-template-2 .promo-2 {
   width:465px;
-  height:180px;
-  margin-bottom:18px;
+  height:240px;
+  margin-bottom:24px;
 }
 .homepage-template-2 .promo-3 {
   margin-left:10px;
   width:940px;
-  height:180px;
-  margin-bottom:18px;
+  height:240px;
+  margin-bottom:24px;
 }
 .homepage-template-2 .promo-4 {
   margin-left:10px;
   width:275px;
-  height:162px;
+  height:216px;
 }
 .homepage-template-2 .promo-5 {
   width:370px;
-  height:162px;
+  height:216px;
 }
 .homepage-template-2 .promo-6 {
   width:275px;
-  height:162px;
+  height:216px;
 }
 .homepage-template-2 .promo-7 {
-  margin-top:18px;
+  margin-top:24px;
   margin-left:10px;
   width:940px;
-  height:36px;
+  height:48px;
 }
 .homepage-template-2 .promo-8 {
-  margin-top:18px;
-  margin-bottom:18px;
+  margin-top:24px;
+  margin-bottom:24px;
   margin-left:10px;
   width:940px;
-  height:36px;
+  height:48px;
 }
