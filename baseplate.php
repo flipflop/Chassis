@@ -7,10 +7,7 @@
 <head> 
 	<title>Baseplate 0.5</title> 
 	
-	<meta charset="utf-8" /> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />  
-    <meta name="description" content="CSS HTML And Structured Scripts In Standards" /> 
-    <meta name="author" content="Rozario Chivers" /> 
+	<?php include("includes/head.php"); ?>
 
     <link rel="stylesheet" href="css/site.css" /> 
     <link rel="stylesheet" href="dev/css/debug.css" /> 
@@ -46,7 +43,7 @@
     
 </head> 
  
-<body> 
+<body class="debug-grid"> 
 		
 <!-- begin Component: Accessibility links --> 
 <div id="skiplinks" data-component-name="skip-links"> 
@@ -160,7 +157,14 @@
                   	<li><a href="#" id="debug-grid-body">debug-grid-body</a></li>
                   	<li><a href="#" id="debug-layouts">debug-layouts</a></li>
                 </ul>
-                <strong>Note:</strong> for browsers that do not support CSS gradients, a <a href="dev/css/creategrid.php">dynamic debug grid background</a> is available in PHP.  	
+                <p>
+                    <strong>Note:</strong> for browsers that do not support CSS gradients, a <a href="dev/css/creategrid.php">dynamic debug grid background</a> is available in PHP.
+                </p>      	
+
+	        	<h2>Documentation</h2>
+    			<p>
+				   <a href="https://github.com/flipflop/Baseplate/wiki">Baseplate Wiki</a> 
+				</p>  	
     	
 			</div><!-- id="content-related" -->
  

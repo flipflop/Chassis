@@ -12,6 +12,17 @@
 	<!-- development QA only (remove), not for production use -->
 	<link rel="stylesheet" href="dev/css/debug.css" />
 
+    <!-- Less CSS: for development only, should not be used on production (uncomment to use Less.js) --> 
+    <!--  
+    <link rel="stylesheet/less" type="text/css" href="dev/less/templates/layouts/layouts.less" />
+    <link rel="stylesheet/less" type="text/css" href="dev/less/templates/components/components.less" />
+    <link rel="stylesheet/less" type="text/css" href="dev/less/templates/pages/pages.less" />
+     
+     
+    <script src="dev/less/less.js"></script>
+    <script> less.env = "development"; less.watch(); </script>
+    -->
+
     <?php
 		/* Less PHP docs : http://leafo.net/lessphp/ */
 		require 'dev/less/lessc.inc.php';

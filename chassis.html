@@ -7,8 +7,41 @@
 <head> 
 	<title>Chassis 2.0</title> 
 	
-	<?php include("includes/head.php"); ?>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- uncomment and remove above to lockdown a specific version of 
+    IE rendering. Not recommended: may be required to testing deltas.
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    -->
+    <meta name="description" content="CSS HTML And Structured Scripts In Standards" />
+    <meta name="author" content="Rozario Chivers" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="search" type="application/opensearchdescription+xml" title="Site Search" href="http://www.site.com/osd.xml" />	
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="apple-touch-startup-image" href="img/startup.png" />
+    <link rel="apple-touch-startup-image" href="img/Default-Portrait.png" />
+  
+    <!--iOS web app, deletable if not needed -->
+    <!--
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    -->
+
+    <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+    <meta http-equiv="cleartype" content="on">
+
+    <!-- Uncomment if you are specifically targeting less enabled mobile browsers
+    <link rel="stylesheet" media="handheld" href="css/handheld.css?v=1">  -->
+
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="copyright" href="#copyright" />
+    <!-- uncomment if HTML5 tags are required
+    <script src="js/lib/modernizr-min.js"></script> -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+    <script>window.jQuery || document.write('<script src="js/lib/jquery-min.js">\x3C/script>')</script>
     <link rel="stylesheet" href="css/site.css" /> 
     <link rel="stylesheet" href="dev/css/debug.css" /> 
 
@@ -23,19 +56,7 @@
     <script> less.env = "development"; less.watch(); </script>
     --> 
     
-    <?php
-		/* Less PHP docs : http://leafo.net/lessphp/ */
-		require 'dev/less/lessc.inc.php';
-		$less1 = new lessc('dev/less/templates/layouts/layouts.less');
-		file_put_contents('css/templates/layouts/layouts.css', $less1->parse());
-		
-		$less2 = new lessc('dev/less/templates/components/components.less');
-		file_put_contents('css/templates/components/components.css', $less2->parse());
-		
-		$less3 = new lessc('dev/less/templates/pages/pages.less');
-		file_put_contents('css/templates/pages/pages.css', $less3->parse());
-	?>
-	
+    	
 	<!-- Compiled Less CSS -->
 	<link rel="stylesheet" type="text/css" href="css/templates/layouts/layouts.css" /> 
 	<link rel="stylesheet" type="text/css" href="css/templates/components/components.css" />
@@ -87,12 +108,12 @@
 				    In order to leverage a solid foundation Chassis is built on top of the <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> and <a href="baseplate.php">Baseplate</a>.
 				</p>
                 
-                <?php include("dev/landing-page/list-pages.php"); ?>
-                
-                <?php include("dev/landing-page/list-layouts.php"); ?>
-                
-                <?php include("dev/landing-page/list-components.php"); ?>
-                
+                <h3>Pages</h3>
+<ul class="view"><li><a href="baseplate.php">baseplate.php</a></li><li><a href="chassis.php">chassis.php</a></li><li><a href="homepage.php">homepage.php</a></li><li><a href="layout-maker.php">layout-maker.php</a></li><li><a href="manifest.php">manifest.php</a></li></ul>                
+                <h3>Layouts</h3>
+<ul><li><a href="homepage.php">homepage.php</a></li></ul>                
+                <h3>Components</h3>
+<ul><li><a href="action.php">action.php</a></li><li><a href="breadcrumb.php">breadcrumb.php</a></li><li><a href="category-nav.php">category-nav.php</a></li><li><a href="footer-links.php">footer-links.php</a></li><li><a href="footer.php">footer.php</a></li><li><a href="header-links.php">header-links.php</a></li><li><a href="header.php">header.php</a></li><li><a href="homepage-promo.php">homepage-promo.php</a></li><li><a href="links.php">links.php</a></li><li><a href="message-area.php">message-area.php</a></li><li><a href="nav-main.php">nav-main.php</a></li><li><a href="pagination.php">pagination.php</a></li><li><a href="search.php">search.php</a></li><li><a href="skip-links.php">skip-links.php</a></li></ul>                
 			</div><!-- id="content" -->
 			
 			<div id="content-related" class="aside" role="complementary">	
@@ -148,8 +169,32 @@
 	
 </div><!-- id="wrapper" --> 
 
-<?php include("includes/scripts.php"); ?>
+<!-- scripts concatenated and minified via build script-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+<script>window.jQuery || document.write('<script src="js/lib/jquery-min.js">\x3C/script>')</script>
+<script src="js/chassis.js"></script>  
+<script src="js/site.js"></script>
+<script src="js/templates/components/search/search.js"></script>
+<!-- end scripts-->
 
+<!-- development QA only (remove), not for production use -->
+<script src="js/plugins.js"></script>
+<!--
+<script src="dev/js/chassis.lang.annotations.js"></script>
+-->
+<!-- Uncomment is profiling is required
+     http://remysharp.com/2007/04/20/performance-profiling-javascript/
+<script src="dev/js/time.js"></script>
+<script src="dev/js/jq_time.js"></script>
+-->
+<script src="dev/js/chassis.debug.js"></script>
+<script src="dev/js/chassis.annotations.js"></script>
+<!-- end development scripts -->
+
+<!--[if lt IE 7 ]>
+  <script src="js/lib/dd_belatedpng.js"></script>
+  <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+<![endif]-->
 <script src="dev/js/baseplate.events.js"></script>
 </body> 
 </html>
