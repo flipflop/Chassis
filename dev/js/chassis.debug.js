@@ -129,7 +129,7 @@
         var componentName = $(this).attr("data-component-name");
         var components = $("*[data-component-name='"+componentName  +"']");
         
-        if (testBodyStr.indexOf(componentName) == -1) { // only continue if componenName is not previously found
+        if (testBodyStr.indexOf(componentName) == -1) { // only continue if componentName is not previously found
           
           if ($(components).length > 1) {
              $(components).each(function(i) {
