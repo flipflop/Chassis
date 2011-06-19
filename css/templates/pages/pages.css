@@ -27,7 +27,7 @@
 .firstGutterLeftPadding { padding-left:10px; }
 .lastGutterRightPadding { padding-right:10px; }
 body {
-  background-color:#f2e3b5;
+  background-color:#67a9d5;
   font-family:Arial, Helvetica, sans-serif;
   color:#333333;
 }
@@ -38,24 +38,22 @@ a:focus, a:active {
   -moz-outline:1px dotted #999999;
   text-decoration:none;
 }
-h1 {
+h1, h2 {
   font-family:'League Gothic', 'Arial Narrow', Helvetica;
   text-transform:uppercase;
   font-size:250%;
-  color:#ffffff;
-}
-h2 {
-  font-family:'League Gothic', 'Arial Narrow', Helvetica;
-  text-transform:uppercase;
-  font-size:250%;
-  color:#ffffff;
 }
 h3 {
   font-family:'League Gothic', 'Arial Narrow', Helvetica;
   text-transform:uppercase;
   font-size:159.9%;
-  color:#ffffff;
 }
+.baseplate h1 { color:#000000; }
+.baseplate h2 { color:#333333; }
+.baseplate h3 { color:#993333; }
+.chassis h1 { color:#ffffff; }
+.chassis h2 { color:#ffffff; }
+.chassis h3 { color:#ffffff; }
 p {
   font-family:'Calluna';
   font-size:138.5%;
@@ -75,7 +73,7 @@ input:focus {
 #container {
   position:relative;
   margin:0 auto;
-  background-color:#fc9b72;
+  background-color:#84c7f4;
   display:inline-block;
   text-align:left;
   border-left:10px solid #5c5f72;

@@ -27,11 +27,13 @@
 .firstGutterLeftPadding { padding-left:10px; }
 .lastGutterRightPadding { padding-right:10px; }
 .debug-grid-body {
+  background-image:none;
   background-image:-webkit-linear-gradient(rgba(0,0,0,0.4) 1px,transparent 1px), -webkit-linear-gradient(0,rgba(0,0,255,0.4) 1px,transparent 1px), -webkit-linear-gradient(rgba(0,0,0,0.3) 1px,transparent 1px), -webkit-linear-gradient(0,rgba(0,0,255,0.3) 1px,transparent 1px);
   background-size:120px 120px, 120px 120px, 24px 24px, 24px 24px;
   -moz-background-size:120px 120px, 120px 120px, 24px 24px, 24px 24px;
 }
-.debug-grid #container {
+.debug-grid #wrapper #container {
+  background-image:none;
   background-image:-moz-linear-gradient(rgba(0,0,0,0.3) 1px,transparent 1px), -moz-linear-gradient(0,rgba(0,0,0,0.1) 10px,transparent 1px);
   background-image:-webkit-linear-gradient(rgba(0,0,0,0.3) 1px,transparent 1px), -webkit-linear-gradient(0,rgba(0,0,0,0.1) 10px,transparent 1px);
   background-image:-o-linear-gradient(rgba(0,0,0,0.3) 1px,transparent 1px), -o-linear-gradient(0,rgba(0,0,0,0.1) 10px,transparent 1px);
