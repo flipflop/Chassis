@@ -10,7 +10,7 @@
  *
  */
 
-;(function ( container, $, doc ) { // add in more parameters for context e.g. ( container, jQuery, document, undefined )
+;(function ( container, $, doc, undefined ) { // add in more parameters for context e.g. ( container, jQuery, document, undefined )
 
   function createModule()  { // Revealing Module Pattern with execution context passed in arguments
     var init = function() {
@@ -184,7 +184,7 @@
   // Public API (assigns to my namespace)
   container.debug = createModule();
 
-})( this.chassis || (this.chassis = {}), jQuery, document, undefined ); // end chassis.debug (create namespace and context)
+})( this.chassis || (this.chassis = {}), jQuery, document ); // end chassis.debug (create namespace and context)
 // end chassis.debug
 
 // console.log(chassis.debug.writeUITests());

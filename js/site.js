@@ -14,9 +14,9 @@
 jQuery.noConflict();
 
 // Advanced Module pattern (public and private members within a namespace)
-//Note: ; before parenthesis is deliberate
+// Note: ; before parenthesis is deliberate and undefined is passed in to protect it from being redefined
 // chassis.pageContext
-;(function ( container, $, doc ) { // add in more parameters for context e.g. ( container, document, jQuery, utils )
+;(function ( container, $, doc, undefined ) { // add in more parameters for context e.g. ( container, document, jQuery, utils )
 
 	function createModule()  { // Revealing Module Pattern with execution context passed in arguments
 		var BODY_CLASS = $("body").attr("class").split(" ")[0],
@@ -60,11 +60,11 @@ jQuery.noConflict();
 	// Public API (assigns to my namespace)
 	container.pageContext = createModule();
 
-})( this.chassis || (this.chassis = {}), jQuery, document, undefined ); // create namespace and context
+})( this.chassis || (this.chassis = {}), jQuery, document ); // create namespace and context
 // end chassis.pageContext
 
 // chassis.util
-;(function ( container, $, doc ) { // add in more parameters for context e.g. ( container, document, jQuery, utils )
+;(function ( container, $, doc, undefined ) { // add in more parameters for context e.g. ( container, document, jQuery, utils )
 
 	function createModule()  { // Revealing Module Pattern with execution context passed in arguments
 	
@@ -260,7 +260,7 @@ jQuery.noConflict();
 	// Public API (assigns to my namespace)
 	container.util = createModule();
 
-})( this.chassis || (this.chassis = {}), jQuery, document, undefined ); // end create namespace and context
+})( this.chassis || (this.chassis = {}), jQuery, document ); // end create namespace and context
 // end chassis.util
 
 /* 

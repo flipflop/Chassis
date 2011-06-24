@@ -17,7 +17,7 @@
  * @return nothing returned
  */
 
-;(function ( container, $, doc ) { // add in more parameters for context e.g. ( container, jQuery, document, undefined )
+;(function ( container, $, doc, undefined ) { // add in more parameters for context e.g. ( container, jQuery, document, undefined )
 
     function createModule()  { // Revealing Module Pattern with execution context passed in arguments
     
@@ -177,7 +177,7 @@
     // Public API (assigns to my namespace)
     container.annotations = createModule();
 
-})( this.chassis || (this.chassis = {}), jQuery, document, undefined ); // end chassis.annotations (create namespace and context)
+})( this.chassis || (this.chassis = {}), jQuery, document ); // end chassis.annotations (create namespace and context)
 // end chassis.annotations
 
 //chassis.annotations.getAll(["@annotate","@assert","@test", "TODO:"]);

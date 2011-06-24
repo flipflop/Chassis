@@ -23,7 +23,7 @@
 
 chassis.namespace("chassis.ui.Homepage"); 
 
-chassis.ui.Homepage = (function( $, doc ) {
+chassis.ui.Homepage = (function( $, doc, undefined ) {
 
   var init = function() { // Note: this function self invokes - remove if not required
     /* Add jQuery components here and populate configuration options */
