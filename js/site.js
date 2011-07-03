@@ -78,7 +78,7 @@ jQuery.noConflict();
     	  addDisplayDimensionClass();
     	  removeNoJSClass();
     	  
-    		if ( window.orientation != undefined ) {
+    		if ( window.orientation !== undefined ) {
     		     window.onorientationchange = updateOrientation;
     			if ( window.ondevicemotion ) {	 
     				 window.ondevicemotion = function(event) {
