@@ -225,10 +225,10 @@
 
 						$("#container").append('<div id="area-'+layoutMaker.areaCount+'" class="area draggable resizable ui-widget-content"><h2>Area '+layoutMaker.areaCount+'</h2></div>');
 						$('#area-'+layoutMaker.areaCount)
-						.draggable({ grid: [1,GRID_BASELINE] })
+						.draggable({ grid: [1,(GRID_BASELINE/2)] })
 						.resizable({
 							containment: '#container',
-							grid: [1,GRID_BASELINE],
+							grid: [1,(GRID_BASELINE/2)],
 							resize : function() {
 
 							}

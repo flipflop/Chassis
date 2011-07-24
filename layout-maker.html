@@ -211,7 +211,7 @@ IE rendering. Not recommended: may be required to testing deltas.
                                 GRID_BASELINE = parseInt(tempData[1].split(";")[0].split(":")[1].replace("px","")),
                                 GRID_COLUMN = parseInt(tempData[2].split(";")[0].split(":")[1].replace("px","")),
                                 GRID_GUTTER = parseInt(tempData[3].split(";")[0].split(":")[1].replace("px",""));
-                                
+                            
                                 // loaded data now setup editor
                         		createButtons();
         						addEvents();
@@ -252,10 +252,10 @@ IE rendering. Not recommended: may be required to testing deltas.
 
 						$("#container").append('<div id="area-'+layoutMaker.areaCount+'" class="area draggable resizable ui-widget-content"><h2>Area '+layoutMaker.areaCount+'</h2></div>');
 						$('#area-'+layoutMaker.areaCount)
-						.draggable({ grid: [1,GRID_BASELINE] })
+						.draggable({ grid: [1,(GRID_BASELINE/2)] })
 						.resizable({
 							containment: '#container',
-							grid: [1,GRID_BASELINE],
+							grid: [1,(GRID_BASELINE/2)],
 							resize : function() {
 
 							}
