@@ -12,7 +12,7 @@
  *
  */
 
- (function($, document, undefined){
+;(function($, document, undefined){
      $(function(){
         $(".tooling li a").bind("click", function(e) {
             if ($("body").hasClass($(this).attr("id"))) {

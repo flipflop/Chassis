@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>dev/js/baseplate.events.js</string>
+	<string>js/chassis.js</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -126,7 +126,7 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>33</integer>
+				<integer>35</integer>
 				<key>line</key>
 				<integer>14</integer>
 			</dict>
@@ -224,30 +224,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>12</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>19</integer>
+				<integer>224</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>14</integer>
-				<key>line</key>
-				<integer>19</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>12</integer>
-				<key>line</key>
-				<integer>19</integer>
-			</dict>
 		</dict>
 		<key>homepage.php</key>
 		<dict>
@@ -400,6 +384,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{23, 65}, {1233, 931}}</string>
+	<string>{{23, 71}, {1233, 931}}</string>
 </dict>
 </plist>
