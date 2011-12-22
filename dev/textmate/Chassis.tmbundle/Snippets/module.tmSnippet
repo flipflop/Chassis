@@ -13,7 +13,7 @@
  * 
  */
 
-;(function ( container, \$, doc ) { // add in more parameters for context e.g. ( container, jQuery, document, undefined )
+;(function ( container, \$, doc, undefined ) { // add in more parameters for context e.g. ( container, jQuery, document, undefined )
 
 	function createModule()  { // Revealing Module Pattern with execution context passed in arguments
 		var localVar1 = "local variable",
@@ -38,21 +38,14 @@
 
 		} // end display()
 		
-	  function saveData() {
-       /* persistence management */
+	  	function saveData() {
+       		/* persistence management */
+ 	   	} // end saveData()
 
-    } // end saveData()
-
-    function destroy() { // Public method
-       /* clean up namespace for garbage collection */
-    	chassis.example = null;
-    } // end destroy()
-
-    function destroyOnUnload() { // Private method
-       \$(window).unload(function() {
-         chassis.${1}.destroy();
-       });
-    } // destroyOnUnload()
+		function destroy() { // Public method
+     	  /* clean up namespace for garbage collection */
+    			chassis.example = null;
+		} // end destroy()
 
 		var contract = { // add public methods / properties here (remove if not needed)
 			addEvents : addEvents,
@@ -67,7 +60,7 @@
 	// Public API (assigns to my namespace)
 	container.${1:name} = createModule();
 
-})( this.chassis || (this.chassis = {}), jQuery, document, undefined ); // end chassis.${1} (create namespace and context)
+})( this.chassis || (this.chassis = {}), jQuery, document ); // end chassis.${1} (create namespace and context)
 // end chassis.${1}</string>
 	<key>name</key>
 	<string>module</string>
